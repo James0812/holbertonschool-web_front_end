@@ -1,0 +1,29 @@
+/* Définition des variables CSS sur l'élément racine */
+:root {
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black);
+}
+
+/* Réinitialiser la couleur du body et des liens avec la variable text-color */
+body {
+    color: var(--text-color);
+}
+
+a {
+    color: var(--text-color);
+}
+
+/* Masquer les éléments avec la classe visually-hidden */
+.visually-hidden {
+    display: none;
+}
+
+/* Réinitialiser la couleur pour section-tagline et card-category avec la variable color-primary */
+.section-tagline,
+.card-category {
+    color: var(--color-primary);
+}
