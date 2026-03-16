@@ -1,15 +1,37 @@
-/* Définition des variables CSS pour les polices sur l'élément racine */
+/* Définition des variables CSS sur l'élément racine */
 :root {
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black);
     --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* Police de base pour le body */
+/* Réinitialiser la couleur du body et des liens avec la variable text-color */
 body {
+    color: var(--text-color);
     font-family: var(--font-family-base);
 }
 
-/* Police pour tous les titres h1 à h6 */
+a {
+    color: var(--text-color);
+}
+
+/* Masquer les éléments avec la classe visually-hidden */
+.visually-hidden {
+    display: none;
+}
+
+/* Réinitialiser la couleur pour section-tagline et card-category avec la variable color-primary */
+.section-tagline,
+.card-category {
+    color: var(--color-primary);
+}
+
+/* Appliquer la font-family-title à tous les niveaux de titres */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-title);
 }
